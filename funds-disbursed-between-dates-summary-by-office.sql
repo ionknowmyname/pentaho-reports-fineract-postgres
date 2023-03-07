@@ -6,7 +6,7 @@
 
 
 select 
-concat(repeat("..",   
+concat(repeat('..',   
    ((LENGTH(ounder.hierarchy) - LENGTH(REPLACE(ounder.hierarchy, '.', '')) - 1))), ounder.name) as "Office/Branch",ounder.name as "Name",
  
 

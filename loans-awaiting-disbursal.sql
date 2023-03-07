@@ -5,7 +5,7 @@
 
 
 SELECT 
-concat(repeat("..",   
+concat(repeat('..',   
    ((LENGTH(ounder.hierarchy) - LENGTH(REPLACE(ounder.hierarchy, '.', '')) - 1))), ounder.name) as "Office/Branch",ounder.name, ounder.id,
 c.account_no as "Client Account No", c.display_name as "Name", l.account_no as "Loan Account No.", pl.name as "Product", 
 f.name as Fund, coalesce(cur.display_symbol, l.currency_code) as Currency,  

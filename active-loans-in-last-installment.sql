@@ -5,7 +5,7 @@
 
 
 
-select concat(repeat("..",   
+select concat(repeat('..',   
    ((LENGTH(lastInstallment.hierarchy) - LENGTH(REPLACE(lastInstallment.hierarchy, '.', '')) - 1))), lastInstallment.branch) as "Office/Branch",lastInstallment.Bname as name ,
 lastInstallment.Currency,
 lastInstallment.Loan Officer, 

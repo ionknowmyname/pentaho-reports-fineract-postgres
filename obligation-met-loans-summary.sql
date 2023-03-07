@@ -7,7 +7,7 @@
 
 
 
-select concat(repeat("..",   
+select concat(repeat('..',   
    ((LENGTH(ounder.hierarchy) - LENGTH(REPLACE(ounder.hierarchy, '.', '')) - 1))), ounder.name) as "Office/Branch",ounder.name, ounder.id,
 coalesce(cur.display_symbol, l.currency_code) as Currency,
 concat("From"," ",${startDate}," ","To"," " ,${endDate})as "period",

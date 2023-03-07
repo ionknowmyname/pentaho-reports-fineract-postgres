@@ -3,7 +3,7 @@
 
 
 
-select concat(repeat("..",   
+select concat(repeat('..',   
    ((LENGTH(mo.hierarchy) - LENGTH(REPLACE(mo.hierarchy, '.', '')) - 1))), mo.name) as "Office/Branch",x.branchn as name,
 x.Currency, x.Principal Outstanding, coalesce(x.Principal Overdue,0)as "Principal Overdue", coalesce(x.Interest Outstanding,0) as "Interest Outstanding", coalesce(x.Interest Overdue,0)as "Interest Overdue", 
 coalesce(x.Fees Outstanding,0)as "Fees Outstanding",coalesce(x.Fees Overdue,0)as "Fees Overdue", coalesce(x.Penalties Outstanding,0)as "Penalties Outstanding", coalesce(x.Penalties Overdue,0) as"Penalties Overdue",(case

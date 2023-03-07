@@ -6,7 +6,7 @@
 
 
 
-select concat(repeat("..",   
+select concat(repeat('..',   
    ((LENGTH(mo.hierarchy) - LENGTH(REPLACE(mo.hierarchy, '.', '')) - 1))), mo.name) as "Office/Branch",x.bname as name , x.currency as Currency,
  x.client_count as "No. of Clients", x.active_loan_count as "No. Active Loans", x. arrears_loan_count as "No. of Loans in Arrears",
 x.principal as "Total Loans Disbursed", x.principal_repaid as "Principal Repaid", x.principal_outstanding as "Principal Outstanding", x.principal_overdue as "Principal Overdue",

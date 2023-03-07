@@ -7,7 +7,7 @@
 
 
 
-select concat(repeat("..",   
+select concat(repeat('..',   
    ((LENGTH(mo.hierarchy) - LENGTH(REPLACE(mo.hierarchy, '.', '')) - 1))), mo.name) as "Office/Branch", x.branchname as "name",
    coalesce(x.currency,'-') as Currency,
  x.client_count as "No. of Clients",
